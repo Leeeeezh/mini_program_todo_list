@@ -1,0 +1,82 @@
+/* pages/edit/edit.wxss */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #363b40;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #2e3033;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #2e3033;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input, textarea {
+  color: #eee;
+  flex: 1;
+}
+
+.confirm {
+  position: relative;
+  z-index: 10000;
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #fde23f;
+  color: #2e3033;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all .05s linear;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer text {
+  color: #999;
+}
+.footer .confirm text {
+  color: #333;
+}
+
+.btnTapped {
+  position: relative;
+  z-index: 10000;
+  background-color: #bba31d;
+}

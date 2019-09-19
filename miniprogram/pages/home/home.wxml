@@ -1,0 +1,12 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="header">
+    <text>共{{todos.length}}条笔记</text>
+  </view>
+  <block wx:for="{{todos}}" wx:key="">
+    <todo-card state="todo" class="card" recover="iconfont icon-recover" remove="iconfont icon-dump" title="{{item.title}}" content="{{item.content}}" timeStamp="{{item.timeStamp}}" index="{{index}}" data-index="{{index}}" bind:remove="onRemove" />
+  </block>
+  <span class="iconfont icon-add add-btn {{isHeartBeat?'heartBeat':''}}" bind:tap="addTodo"/>
+  <!-- <add-button class="addBtn" bind:add="addTodo" /> -->
+  <text class="empty" wx:if="{{todos.length==0}}">什么也没有...</text>
+</view>

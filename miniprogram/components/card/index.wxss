@@ -1,0 +1,116 @@
+/* components/card/index.wxss */
+
+.container {
+  position: relative;
+  box-shadow: 0 0 20rpx #333;
+  width: 680rpx;
+  border-radius: 20rpx;
+  background-color: #2e3033;
+  color: #eee;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all .05s linear;
+}
+
+.title {
+  width: 100%;
+  font-size: 50rpx;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title text {
+  border-bottom: 1rpx solid #888;
+  display: block;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.content {
+  font-size: 40rpx;
+  color: #aaa;
+  padding: 30rpx 0;
+  width: 100%;
+}
+
+.content text {
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+.bar {
+  width: 300rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background-color: #363b40;
+}
+
+.remove, .recover {
+  position: absolute;
+  border-radius: 50%;
+  top: 20rpx;
+  left: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.removeIcon, .recoverIcon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.createdTime {
+  color: #777;
+  padding: 10rpx 0;
+}
+
+.btn {
+  color: #8a8b8c;
+  position: absolute;
+  font-size: 50rpx;
+  top: 40rpx;
+  left: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.slide {
+  animation: slide 0.5s 1;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-150%);
+  }
+}
+
+.cardTapped {
+  background-color: rgba(255,255,255,.1);
+}
+
+.removeTapped,recoverTapped {
+  color: #444;
+}

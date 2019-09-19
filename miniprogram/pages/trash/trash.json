@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "todo-card": "../../components/card/index",
+    "clear-button":"../../components/clear-button/index",
+    "my-model":"../../components/model/index"
+  }
+}

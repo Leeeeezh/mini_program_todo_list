@@ -1,0 +1,16 @@
+<!--components/card/index.wxml-->
+<view hover-class="cardTapped" class="container {{isMove?'slide':''}}" bind:tap="toDetail">
+  <view class="title">
+    <text>{{title}}</text>
+  </view>
+  <view class="createdTime">
+    <text>{{formatedDateString}}</text>
+  </view>
+  <view class="content">
+    <text>{{content}}</text>
+  </view>
+
+  <view class="bar"></view>
+  <span wx:if="{{state==='todo'}}" hover-class="removeTapped" class="remove btn" catch:tap="onRemove"/>
+  <span wx:if="{{state==='trash'}}" hover-class="recoverTapped" class="recover btn" catch:tap="onRecover"/>
+</view>

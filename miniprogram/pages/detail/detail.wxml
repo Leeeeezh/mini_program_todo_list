@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="title center">
+    <text>{{title}}</text>
+  </view>
+  <view class="date center">
+    <text>创建于 : {{formatedDateString}}</text>
+  </view>
+  <view class="content center">
+    <text>{{content}}</text>
+  </view>
+  <span class="iconfont icon-edit editBtn {{isEditIconShow&&editLock!=true?'':'hide'}} {{isShake?'shake':''}}" bind:tap="onEdit" />
+</view>

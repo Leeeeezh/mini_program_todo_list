@@ -1,0 +1,82 @@
+/* pages/detail/detail.wxss */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #363b40;
+  padding: 40rpx;
+  color: #999;
+}
+
+.title {
+  width: 100%;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #eee;
+  border-left: 10rpx solid #eee;
+}
+
+.center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10rpx;
+}
+
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  color: #bbb;
+  font-size: 40rpx;
+}
+
+.editBtn {
+  font-size: 150rpx;
+  color: #fde23f;
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  transition: all .3s linear;
+}
+
+.shake {
+  animation: shake.6s 1;
+}
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.hide {
+  transform: translateX(200rpx);
+}

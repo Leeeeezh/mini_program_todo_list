@@ -1,0 +1,100 @@
+/* components/model/index.wxss */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity .3s ease-out;
+}
+
+.dialog {
+  box-sizing: border-box;
+  padding: 20rpx 0 40rpx;
+  width: 100%;
+  min-height: 200rpx;
+  color: #eee;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.text{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+  font-size: 50rpx;
+}
+
+options {
+  padding: 30rpx 0;
+}
+
+.negative, .positive {
+  width: 300rpx;
+  height: 100rpx;
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tapped {
+  background-color: rgba(255,255,255,.1);
+}
+
+
+.heartBeat {
+  animation: 0.6s heartBeat 1;
+}
+
+@keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.fadeOut {
+  opacity: 0;
+}

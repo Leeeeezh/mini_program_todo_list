@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/edit/edit",
+    "pages/detail/detail",
+    "pages/trash/trash"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#363b40",
+    "navigationBarTitleText": "土豆记事",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#2e3033",
+    "color": "#bfbfbf",
+    "selectedColor": "#fde23f",
+    "list": [
+      {
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list_active.png",
+        "pagePath": "pages/home/home",
+        "text": "笔记"
+      },
+      {
+        "iconPath": "images/trash.png",
+        "selectedIconPath": "images/trash_active.png",
+        "pagePath": "pages/trash/trash",
+        "text": "废纸篓"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

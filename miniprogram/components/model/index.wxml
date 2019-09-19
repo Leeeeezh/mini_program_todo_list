@@ -1,0 +1,12 @@
+<!--components/model/index.wxml-->
+<view class="container {{isCompleted?'fadeOut':''}}" bind:tap="hideModel">
+  <view class="dialog heartBeat">
+    <view class="text">
+      <text>{{text}}</text>
+    </view>
+    <view class="options">
+      <view hover-class="tapped" class="positive" catch:tap="confirm"><text>好🤨</text></view>
+      <view hover-class="tapped" class="negative" catch:tap="hideModel"><text>不要啊!🤣</text></view>
+    </view>
+  </view>
+</view>

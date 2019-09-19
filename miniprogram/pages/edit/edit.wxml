@@ -1,0 +1,15 @@
+<!--pages/edit/edit.wxml-->
+<view class="container">
+  <view class="title">
+    <input auto-focus="" value="{{title?title:''}}" placeholder="这是标题" bindinput="onTitleInput"></input>
+  </view>
+  <view class="content">
+    <textarea maxlength="-1" value="{{content?content:''}}" placeholder="这是内容" bindinput="onContentInput"></textarea>
+  </view>
+  <view class="footer">
+    <text class="wordNum">{{content.length}}</text>
+    <view class="confirm" bind:tap="onConfirm" hover-class="btnTapped">
+      <text>写好了</text>
+    </view>
+  </view>
+</view>
