@@ -5,18 +5,20 @@
   min-height: 100vh;
   box-sizing: border-box;
   background-color: #363b40;
-  padding: 40rpx;
+  padding: 20rpx;
   color: #999;
 }
 
 .title {
   width: 100%;
   padding: 20rpx;
+  box-sizing: border-box;
   margin-bottom: 20rpx;
   font-size: 60rpx;
   font-weight: bold;
   color: #eee;
-  border-left: 10rpx solid #eee;
+  text-shadow: 0 0 2rpx #ccc;
+  /* border-left: 10rpx solid #eee; */
 }
 
 .center{
@@ -38,6 +40,7 @@
   padding: 20rpx;
   color: #bbb;
   font-size: 40rpx;
+  text-shadow: 0 0 2rpx #ccc;
 }
 
 .editBtn {

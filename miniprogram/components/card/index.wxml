@@ -1,5 +1,5 @@
 <!--components/card/index.wxml-->
-<view hover-class="cardTapped" class="container {{isMove?'slide':''}}" bind:tap="toDetail">
+<view hover-class="cardTapped" class="container {{isMove?'fadeOutRightBig':''}}" bind:tap="toDetail">
   <view class="title">
     <text>{{title}}</text>
   </view>
@@ -7,7 +7,7 @@
     <text>{{formatedDateString}}</text>
   </view>
   <view class="content">
-    <text>{{content}}</text>
+    <text space="nbsp">{{content}}</text>
   </view>
 
   <view class="bar"></view>

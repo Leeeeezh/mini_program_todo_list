@@ -7,7 +7,7 @@
     <text>创建于 : {{formatedDateString}}</text>
   </view>
   <view class="content center">
-    <text>{{content}}</text>
+    <text space="nbsp" decode="{{true}}" selectable="{{true}}">{{content}}</text>
   </view>
   <span class="iconfont icon-edit editBtn {{isEditIconShow&&editLock!=true?'':'hide'}} {{isShake?'shake':''}}" bind:tap="onEdit" />
 </view>

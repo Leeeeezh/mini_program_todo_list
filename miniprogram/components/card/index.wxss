@@ -26,7 +26,7 @@
 }
 
 .title text {
-  border-bottom: 1rpx solid #888;
+  /* border-bottom: 1rpx solid #888; */
   display: block;
   max-width: 70%;
   overflow: hidden;
@@ -86,24 +86,26 @@
   position: absolute;
   font-size: 50rpx;
   top: 40rpx;
-  left: 40rpx;
-  width: 50rpx;
-  height: 50rpx;
+  left: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
   text-align: center;
   vertical-align: middle;
 }
 
-.slide {
-  animation: slide 0.5s 1;
+.fadeOutRightBig{
+  animation: fadeOutRightBig .5s 1;
 }
 
-@keyframes slide {
+@keyframes fadeOutRightBig {
   from {
-    transform: translateX(0);
+    opacity: 1;
   }
 
   to {
-    transform: translateX(-150%);
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 

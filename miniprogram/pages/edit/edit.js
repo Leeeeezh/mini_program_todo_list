@@ -9,7 +9,7 @@ Page({
     index: -1,
     title: '',
     content: '',
-    timeStamp: 0
+    timeStamp: 0,
   },
 
   /**
@@ -84,7 +84,11 @@ Page({
         index,
         formatedDateString
       })
-      todos[index] = todo
+      for(let index in todos){
+        if(todos[index].timeStamp === todo.timeStamp){
+          todos[index] = todo
+        }
+      }
     }
     wx.setStorageSync('todos', todos)
 

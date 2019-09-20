@@ -4,7 +4,7 @@
     <text>共{{trashes.length}}条垃圾</text>
   </view>
   <block wx:for="{{trashes}}" wx:key="">
-    <todo-card state="trash" class="card {{isClear?'fadeOutLeftBig':''}}" recover="iconfont icon-recover" title="{{item.title}}" content="{{item.content}}" timeStamp="{{item.timeStamp}}" data-index="{{index}}" bind:recover="onRecover"/>
+    <todo-card state="trash" class="card {{isClear?'fadeOutRightBig':''}}" recover="iconfont icon-recover" title="{{item.title}}" content="{{item.content}}" timeStamp="{{item.timeStamp}}" data-index="{{index}}" bind:recover="onRecover"/>
   </block>
   <span class="iconfont icon-clear clearBtn {{isSwing?'swing':''}}" bind:tap="showModel" wx:if="{{trashes.length!=0}}"/>
   <text class="empty" wx:if="{{trashes.length==0}}">什么也没有...</text>

@@ -38,10 +38,10 @@ Component({
         isMove: true
       })
       setTimeout(() => {
+        this.triggerEvent('remove',{timeStamp: this.data.timeStamp})
         this.setData({
           isMove: false
         })
-        this.triggerEvent('remove')
       }, 300)
     },
     onRecover(event) {
@@ -49,10 +49,10 @@ Component({
         isMove: true
       })
       setTimeout(() => {
+        this.triggerEvent('recover')
         this.setData({
           isMove: false
         })
-        this.triggerEvent('recover')
       }, 300)
     },
     toDetail() {

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "todo-card": "../../components/card/index",
-    "add-button": "../../components/add-button/index"
+    "search": "../../components/search/index"
   }
 }

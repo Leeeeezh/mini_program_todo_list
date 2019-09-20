@@ -27,8 +27,9 @@ Page({
     this._loadTodos()
     todos.unshift(recoverItem)
     this._saveTodos()
-
-    this._toast('还原啦😀')
+    setTimeout(() => {
+      this._toast('还原啦😀')
+    }, 400)
   },
   showModel() {
     this.setData({

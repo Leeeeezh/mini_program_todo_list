@@ -1,15 +1,19 @@
 <!--pages/edit/edit.wxml-->
 <view class="container">
-  <view class="title">
-    <input auto-focus="" value="{{title?title:''}}" placeholder="这是标题" bindinput="onTitleInput"></input>
-  </view>
-  <view class="content">
-    <textarea maxlength="-1" value="{{content?content:''}}" placeholder="这是内容" bindinput="onContentInput"></textarea>
-  </view>
-  <view class="footer">
-    <text class="wordNum">{{content.length}}</text>
+  <view class="header">
+    <view class="info">
+      <text class="headerTitle">{{title?title:"未标题"}}</text>
+      <text class="wordNum">{{content.length}}字</text>
+    </view>
     <view class="confirm" bind:tap="onConfirm" hover-class="btnTapped">
       <text>写好了</text>
     </view>
   </view>
+  <view class="title">
+    <input value="{{title?title:''}}" placeholder="这是标题" bindinput="onTitleInput"></input>
+  </view>
+  <view class="content">
+    <textarea cursor-spacing="30" show-confirm-bar="{{false}}" auto-height="{{true}}" maxlength="-1" value="{{content?content:''}}" placeholder="这是内容" bindinput="onContentInput" bindfocus="onFocus"></textarea>
+  </view>
+
 </view>

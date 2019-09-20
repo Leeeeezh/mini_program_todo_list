@@ -13,6 +13,7 @@ Page({
   },
   onLoad: function(options) {
     const temp = wx.getStorageSync('temp')
+    console.log(temp.content)
     this.setData(temp)
 
     const pages = getCurrentPages()

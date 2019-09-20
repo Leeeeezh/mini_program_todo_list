@@ -1,12 +1,21 @@
 <!--pages/home/home.wxml-->
 <view class="container">
+  <search class="search {{isSearchBarShow?'':'searchBarHide'}}" bind:search="onSearch"/>
+
   <view class="header">
     <text>共{{todos.length}}条笔记</text>
   </view>
   <block wx:for="{{todos}}" wx:key="">
     <todo-card state="todo" class="card" recover="iconfont icon-recover" remove="iconfont icon-dump" title="{{item.title}}" content="{{item.content}}" timeStamp="{{item.timeStamp}}" index="{{index}}" data-index="{{index}}" bind:remove="onRemove" />
   </block>
-  <span class="iconfont icon-add add-btn {{isHeartBeat?'heartBeat':''}}" bind:tap="addTodo"/>
-  <!-- <add-button class="addBtn" bind:add="addTodo" /> -->
+  <view class="footer" wx:if="{{todos.length!=0}}">
+    <view class="line"></view>
+    <text>没有更多了</text>
+    <view class="line"></view>
+  </view>
+  <view class="cancelSearchBtn" wx:if="{{isSearching}}" bind:tap="cancelSearch">
+    <text>取消搜索</text>
+  </view>
+  <span wx:if="{{!isSearching}}" class="iconfont icon-add add-btn {{isHeartBeat?'heartBeat':''}}" bind:tap="addTodo"/>
   <text class="empty" wx:if="{{todos.length==0}}">什么也没有...</text>
 </view>
