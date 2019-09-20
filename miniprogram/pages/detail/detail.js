@@ -13,16 +13,18 @@ Page({
   },
   onLoad: function(options) {
     const temp = wx.getStorageSync('temp')
-    console.log(temp.content)
     this.setData(temp)
 
     const pages = getCurrentPages()
-    console.log(pages[0].route)
-    if(pages[0].route == 'pages/trash/trash'){
+    if (pages[0].route == 'pages/trash/trash') {
       this.setData({
         editLock: true
       })
     }
+  },
+  onshow() {
+    const temp = wx.getStorageSync('temp')
+    this.setData(temp)
   },
   onEdit() {
     this.setData({

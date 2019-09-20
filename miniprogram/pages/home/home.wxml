@@ -1,12 +1,19 @@
 <!--pages/home/home.wxml-->
 <view class="container">
-  <search class="search {{isSearchBarShow?'':'searchBarHide'}}" bind:search="onSearch"/>
-
+  <search class="search {{isSearchBarShow?'':'searchBarHide'}}" clear="{{clear}}" bind:search="onSearch"/>
+  
   <view class="header">
     <text>共{{todos.length}}条笔记</text>
+    <view hover-class="tapped" class="filter"  bind:tap="toggleFilter">
+      <text>过滤</text>
+      <span class="dot {{indicatorColor}}"/>
+    </view>
+    <view hover-class="tapped" class="orderBy" bind:tap="changeOrder"><span class="iconfont {{order==='asc'?'icon-asc':'icon-desc'}}"/>{{order==='desc'?'时间降序':'时间升序'}}</view>
   </view>
+  <filter-pannel class="pannel" isShow="{{isFilterShow}}" bind:entag="filtLabel"/>
+
   <block wx:for="{{todos}}" wx:key="">
-    <todo-card state="todo" class="card" recover="iconfont icon-recover" remove="iconfont icon-dump" title="{{item.title}}" content="{{item.content}}" timeStamp="{{item.timeStamp}}" index="{{index}}" data-index="{{index}}" bind:remove="onRemove" />
+    <todo-card state="todo" class="card" recover="iconfont icon-recover" remove="iconfont icon-dump" title="{{item.title}}" content="{{item.content}}" label='{{item.label}}' timeStamp="{{item.timeStamp}}" index="{{index}}" data-index="{{index}}" bind:remove="onRemove" bind:entag="enTag"/>
   </block>
   <view class="footer" wx:if="{{todos.length!=0}}">
     <view class="line"></view>

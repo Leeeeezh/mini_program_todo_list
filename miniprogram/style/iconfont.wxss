@@ -23,11 +23,11 @@
   content: "\e66d";
 }
 
-.icon-paixu-jiangxu:before {
+.icon-desc:before {
   content: "\e65f";
 }
 
-.icon-paixu-shengxu:before {
+.icon-asc:before {
   content: "\e660";
 }
 

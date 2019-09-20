@@ -20,7 +20,13 @@ Page({
     this._loadTrashes()
   },
   onRecover(event) {
-    let recoverItem = trashes.splice(event.target.dataset.index, 1)[0]
+    let recoverItem = {}
+    let timeStamp = event.detail.timeStamp
+    for (let index in trashes) {
+      if (trashes[index].timeStamp == timeStamp) {
+        recoverItem = trashes.splice(index, 1)[0]
+      }
+    }
 
     this._updateTrashes()
 
@@ -30,6 +36,7 @@ Page({
     setTimeout(() => {
       this._toast('还原啦😀')
     }, 400)
+    wx.setStorageSync('isReloadRequired',true)
   },
   showModel() {
     this.setData({
@@ -105,6 +112,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    console.log()
     this._loadTrashes()
   },
 

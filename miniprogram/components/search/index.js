@@ -4,9 +4,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    clear: String
   },
-
+  observers:{
+    clear(){
+      this.setData({
+        keyword: ''
+      })
+    }
+  },
   /**
    * 组件的初始数据
    */

@@ -13,4 +13,8 @@
   <view class="bar"></view>
   <span wx:if="{{state==='todo'}}" hover-class="removeTapped" class="remove btn" catch:tap="onRemove"/>
   <span wx:if="{{state==='trash'}}" hover-class="recoverTapped" class="recover btn" catch:tap="onRecover"/>
+  <view class="labelWrap" catch:tap="togglePannel">
+    <view class="label {{label}}"></view>
+  </view>
+  <filter-pannel isShow="{{isPannelShow}}" class="pannel" bind:entag="enTag"/>
 </view>

@@ -1,0 +1,12 @@
+<!--components/filter-pannel/index.wxml-->
+<view class="container" hidden="{{!isShow}}" catch:tap="enTag">
+  <view data-color="red" class="dot red"></view>
+  <view data-color="orange" class="dot orange"></view>
+  <view data-color="yellow" class="dot yellow"></view>
+  <view data-color="blue" class="dot blue"></view>
+  <view data-color="green" class="dot green"></view>
+  <view data-color="purple" class="dot purple"></view>
+  <view data-color="pink" class="dot pink"></view>
+  <view data-color="white" class="dot white"></view>
+  <view data-color="none" class="dot del">✖</view>
+</view>

@@ -19,13 +19,31 @@
   left: 0;
   box-shadow: 0 0 16rpx #222;
   transform: translateY(0);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header {
   width: 100%;
   padding: 20rpx 0 40rpx;
   color: #999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderBy, .filter {
+  padding: 20rpx;
+  background-color: #2e3033;
+  border-radius: 20rpx;
+}
+
+.orderBy span {
+  padding: 0 10rpx;
+}
+
+.tapped {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card {
@@ -41,6 +59,7 @@
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
+  text-shadow: 0 0 14rpx #222;
 }
 
 .empty {
@@ -87,7 +106,7 @@
 }
 
 .cancelSearchBtn {
-  padding:20rpx;
+  padding: 20rpx;
   border-radius: 10rpx;
   background-color: #fde23f;
   color: #333;
@@ -98,24 +117,84 @@
   box-shadow: 0 0 10rpx #111;
 }
 
-.footer{
+.footer {
   width: 100%;
   padding: 20rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
-  color:#999;
+  color: #999;
 }
 
 .footer .line {
-  width:200rpx;
-  height:1rpx;
+  width: 200rpx;
+  height: 1rpx;
   background-color: #666;
 }
 
-.searchBarHide{
+.searchBarHide {
   transform: translateY(-100%);
   /* top: -100%; */
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.pannel {
+  position: absolute;
+  z-index: 2000;
+  top: 230rpx;
+  left: 50%;
+  transform: translateX(-60%);
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: #fde23f;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.blue {
+  background-color: #03a9f4;
+}
+
+.purple {
+  background-color: #9c27b0;
+}
+
+.pink {
+  background-color: #ff4081;
+}
+
+.orange {
+  background-color: #ffa000;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.none {
+  background-color: rgba(255,255,255,.5);
+  /* border: 6rpx solid #eee; */
 }

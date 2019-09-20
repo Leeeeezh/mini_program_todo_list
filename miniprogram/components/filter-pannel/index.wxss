@@ -1,0 +1,58 @@
+/* components/filter-pannel/index.wxss */
+
+.container {
+  width:360rpx;
+  height:250rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #222;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin: 0 14rpx;
+}
+.del {
+  padding:20rpx;
+  font-size: 50rpx;
+  color: #eee;
+}
+
+.red {
+  background-color: #d32f2f;
+}
+
+.yellow {
+  background-color: #fde23f;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.blue {
+  background-color: #03a9f4;
+}
+
+.purple {
+  background-color: #9c27b0;
+}
+
+.pink {
+  background-color: #ff4081;
+}
+
+.orange {
+  background-color: #ffa000;
+}
+
+.white {
+  background-color: #fff;
+}

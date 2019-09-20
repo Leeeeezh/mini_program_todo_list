@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  transition: all .05s linear;
+  transition: all 0.05s linear;
 }
 
 .title {
@@ -93,8 +93,8 @@
   vertical-align: middle;
 }
 
-.fadeOutRightBig{
-  animation: fadeOutRightBig .5s 1;
+.fadeOutRightBig {
+  animation: fadeOutRightBig 0.5s 1;
 }
 
 @keyframes fadeOutRightBig {
@@ -110,9 +110,67 @@
 }
 
 .cardTapped {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.removeTapped,recoverTapped {
+.removeTapped, recoverTapped {
   color: #444;
+}
+
+.pannel {
+  position: absolute;
+  z-index: 1000;
+  top: 120rpx;
+  right: 20rpx;
+}
+
+.labelWrap{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width:100rpx;
+  height:100rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: #fde23f;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.blue {
+  background-color: #03a9f4;
+}
+
+.purple {
+  background-color: #9c27b0;
+}
+
+.pink {
+  background-color: #ff4081;
+}
+
+.orange {
+  background-color: #ffa000;
+}
+
+.white {
+  background-color: #fff;
 }

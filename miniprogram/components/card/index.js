@@ -1,6 +1,7 @@
 // components/card/index.js
 Component({
   properties: {
+    label: String,
     index: Number,
     title: String,
     content: String,
@@ -29,16 +30,36 @@ Component({
    * 组件的初始数据
    */
   data: {
+    isPannelShow: false,
     isMove: false,
     formatedDateString: ''
   },
   methods: {
+    enTag(evt) {
+      let color = evt.detail.color
+      if (color == 'none') {
+        this.setData({
+          isPannelShow: false
+        })
+        return
+      }
+      this.setData({
+        label: color,
+        isPannelShow: false
+      })
+      this.triggerEvent('entag', {
+        color,
+        timeStamp: this.data.timeStamp
+      })
+    },
     onRemove(event) {
       this.setData({
         isMove: true
       })
       setTimeout(() => {
-        this.triggerEvent('remove',{timeStamp: this.data.timeStamp})
+        this.triggerEvent('remove', {
+          timeStamp: this.data.timeStamp
+        })
         this.setData({
           isMove: false
         })
@@ -49,11 +70,18 @@ Component({
         isMove: true
       })
       setTimeout(() => {
-        this.triggerEvent('recover')
+        this.triggerEvent('recover', {
+          timeStamp: this.data.timeStamp
+        })
         this.setData({
           isMove: false
         })
       }, 300)
+    },
+    togglePannel() {
+      this.setData({
+        isPannelShow: !this.data.isPannelShow
+      })
     },
     toDetail() {
       let timeStamp = this.data.timeStamp
@@ -61,12 +89,14 @@ Component({
       let index = this.data.index
       let title = this.data.title
       let content = this.data.content
+      let label = this.data.label
       wx.setStorageSync('temp', {
         index,
         timeStamp,
         formatedDateString,
         title,
-        content
+        content,
+        label
       })
       wx.navigateTo({
         url: `../../pages/detail/detail`,

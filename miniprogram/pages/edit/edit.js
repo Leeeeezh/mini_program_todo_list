@@ -1,5 +1,6 @@
 // pages/edit/edit.js
 let todos = []
+let mode = ''
 Page({
 
   /**
@@ -10,12 +11,14 @@ Page({
     title: '',
     content: '',
     timeStamp: 0,
+    label: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    mode = options.mode
     const temp = wx.getStorageSync('temp')
     if (options.mode == "update") {
       this.setData(temp)
@@ -35,8 +38,8 @@ Page({
     })
   },
   onConfirm() {
-    console.log('confirm')
     if (this._check()) {
+      wx.setStorageSync('isReloadRequired', true)      
       this._saveTodo()
       this._toast(this.data.index == -1 ? '添加成功😋' : '编辑成功😋')
       setTimeout(() => {
@@ -62,36 +65,35 @@ Page({
     const index = this.data.index
     const content = this.data.content
     const timeStamp = this.data.timeStamp
-    console.log(index)
-    if (index == -1) {
+    const label = this.data.label
+    if (mode == 'update') {
       const todo = {
         title,
         content,
-        timeStamp: Date.now()
+        label,
+        timeStamp
       }
-      todos.unshift(todo)
+      let formatedDateString = this.data.formatedDateString
+      wx.setStorageSync('temp', {
+        ...todo,
+        formatedDateString
+      })
+      for (let index in todos) {
+        if (todos[index].timeStamp == todo.timeStamp) {
+          todos[index] = todo
+          break
+        }
+      }
     } else {
       const todo = {
         title,
         content,
-        timeStamp
+        timeStamp: Date.now(),
+        label: 'white'
       }
-      //更新temp
-      let index = this.data.index
-      let formatedDateString = this.data.formatedDateString
-      wx.setStorageSync('temp', {
-        ...todo,
-        index,
-        formatedDateString
-      })
-      for(let index in todos){
-        if(todos[index].timeStamp === todo.timeStamp){
-          todos[index] = todo
-        }
-      }
+      todos.unshift(todo)
     }
     wx.setStorageSync('todos', todos)
-
   },
   _navBack() {
     const pages = getCurrentPages()
