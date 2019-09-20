@@ -52,7 +52,7 @@
 
 .wordNum {
   color: #666;
-  padding-left: 40rpx;
+  padding-left: 20rpx;
 }
 
 .title {

@@ -34,7 +34,7 @@
 
 .orderBy, .filter {
   padding: 20rpx;
-  background-color: #2e3033;
+  /* background-color: #2e3033; */
   border-radius: 20rpx;
 }
 
