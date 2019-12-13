@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "i": "^0.3.6",
-    "npm": "^6.11.3",
+    "npm": "^6.13.4",
     "vant-weapp": "^0.5.21"
   }
 }
